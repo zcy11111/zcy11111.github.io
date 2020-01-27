@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <meta name="description" content="#1. 简单事件绑定：这种绑定事件方式不会重叠
+1$(document).click(function () &amp;#123;2alert(1);3&amp;#125;)4`
+2. bind方式（不推荐，1.7以后的jQuery版本被on取代）
+1$(document).bind(&#34;click mousee" />
+  
+
+  
+  
+  
+  
+  
+  
+  <title>jq事件绑定四种方式 | zcy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#1. 简单事件绑定：这种绑定事件方式不会重叠 1$(document).click(function () &amp;#123;2alert(1);3&amp;#125;)4&#96; 2. bind方式（不推荐，1.7以后的jQuery版本被on取代） 1$(document).bind(&quot;click mouseenter&quot;,function () &amp;#123;2           alert(1);3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jq事件绑定四种方式">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2017&#x2F;03&#x2F;03&#x2F;jq%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F&#x2F;index.html">
+<meta property="og:site_name" content="zcy">
+<meta property="og:description" content="#1. 简单事件绑定：这种绑定事件方式不会重叠 1$(document).click(function () &amp;#123;2alert(1);3&amp;#125;)4&#96; 2. bind方式（不推荐，1.7以后的jQuery版本被on取代） 1$(document).bind(&quot;click mouseenter&quot;,function () &amp;#123;2           alert(1);3">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-27T12:59:28.577Z">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/css/images/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src='//push.zhanzhang.baidu.com/push.js'></script>
+</head>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="zcy" rel="home">zcy</a>
+      </h1>
+      
+        <h2 class="site-description hitokoto"></h2>
+        <script type="text/javascript" src="https://v1.hitokoto.cn/?encode=js"></script>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/">Home</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/archives">Archives</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-jq事件绑定四种方式" class="post-jq事件绑定四种方式 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      jq事件绑定四种方式
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="javascript:void(0);" target="_blank" rel="noopener" data-url="http://yoursite.com/2017/03/03/jq%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F/" data-id="ck5wglav300012wr66naef4rj" class="leave-reply bdsharebuttonbox" data-cmd="more">Share</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>#1. 简单事件绑定：<br>这种绑定事件方式不会重叠</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(document).click(<span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">alert(1);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">`</span></pre></td></tr></table></figure>
+<p>2. bind方式（不推荐，1.7以后的jQuery版本被on取代）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(document).<span class="built_in">bind</span>(<span class="string">"click mouseenter"</span>,<span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">           alert(1);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       &#125;)</span></pre></td></tr></table></figure>
+<p>比简单事件绑定方式的优势：<br>可以同时绑定多个事件，比如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">bind</span>(“mouseenter mouseleave”, <span class="function"><span class="title">function</span></span>()&#123;&#125;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">`</span></pre></td></tr></table></figure>
+<p>缺点：要绑定事件的元素必须存在文档中。</p>
+<p>delegate方式（特点：性能高，支持动态创建的元素）<br>与前两种方式最大的优势：减少事件绑定次数提高效率，支持动态创建出来的元素绑定事件！</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(document).delegate(<span class="string">".box"</span>,<span class="string">"click"</span>,<span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">            alert(1);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        &#125;)</span></pre></td></tr></table></figure>
+<p>on方式（最现代的方式，兼容zepto(移动端类似jQuery的一个库)，强烈建议使用的方式）（重点）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(document).on(<span class="string">"click mouseenter"</span>,<span class="string">".box"</span>,&#123;<span class="string">"name"</span>:111&#125;,<span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">           alert(event.data.name);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       &#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">       $(<span class="string">".box"</span>).on(<span class="string">"click"</span>,&#123;&#125;,<span class="keyword">function</span> (e) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">           e.data</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       &#125;)</span></pre></td></tr></table></figure>
+<p>事件触发(1)(触发浏览器行为)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">1            $(document).click();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">2            $(document).mouseenter();</span></pre></td></tr></table></figure>
+<p>事件触发(2)(触发浏览器行为)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">1           $(document).trigger(<span class="string">"mouseenter"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">2           $(document).trigger(<span class="string">"click"</span>);</span></pre></td></tr></table></figure>
+<p>事件触发(3)(不触发浏览器行为)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	1      $(document).triggerHandler(<span class="string">"mouseenter"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	2         $(document).triggerHandler(<span class="string">"click"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"> 	3      $(<span class="string">"input"</span>).on(<span class="string">"focus"</span>, <span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   	4        alert(<span class="string">"我获取了焦点！"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    5  &#125;);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">`</span></pre></td></tr></table></figure>
+<p>事件触发(2)(触发浏览器行为)(执行程序，触动事件)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"> $(document).click(<span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    $(<span class="string">"input"</span>).trigger(<span class="string">"focus"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;);</span></pre></td></tr></table></figure>
+<p>事件触发(3)(不触发浏览器行为)(只执行程序，不触动事件)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$(document).click(<span class="function"><span class="title">function</span></span> () &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">     $(<span class="string">"input"</span>).triggerHandler(<span class="string">"focus"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"> &#125;);</span></pre></td></tr></table></figure>
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/2017/03/03/jq%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F/">
+    <time datetime="2017-03-03T12:54:15.000Z" class="entry-date">
+        2017-03-03
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2019/11/30/hello-world/" rel="prev"><span class="meta-nav">←</span> Hello World</a></span>
+    
+    
+        <span class="nav-next"><a href="/2017/02/27/%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%92%8C%E4%BD%BF%E7%94%A8/" rel="next">图标字体的优缺点和使用 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside id="search" class="widget widget_search"><form role="search" method="get" accept-charset="utf-8" id="searchform" class="searchform" action="//google.com/search">
+    <div>
+        <input type="text" value="" name="s" id="s" />
+        <input type="submit" id="searchsubmit" value="搜索" />
+    </div>
+</form></aside>
+  
+    
+  
+    
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/30/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/03/jq%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%9B%9B%E7%A7%8D%E6%96%B9%E5%BC%8F/">jq事件绑定四种方式</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/27/%E5%9B%BE%E6%A0%87%E5%AD%97%E4%BD%93%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E5%92%8C%E4%BD%BF%E7%94%A8/">图标字体的优缺点和使用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/17/%E6%8E%92%E5%BA%8F/">排序</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/16/%E5%8E%BB%E9%87%8D/">去重</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  
+    
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2020 caiyun
+    All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/js/share.js'];</script>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
